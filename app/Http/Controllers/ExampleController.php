@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+use  App\Models\User;
+use Illuminate\Http\Request;
 
 class ExampleController extends Controller
 {
@@ -12,6 +14,12 @@ class ExampleController extends Controller
     public function __construct()
     {
         //
+    }
+
+    public function test()
+    {
+        // code...
+        return ExampleController::all();
     }
 
     //

@@ -33,5 +33,9 @@ $router->group([
     $router->post('logout', 'AuthController@logout');
     $router->post('refresh', 'AuthController@refresh');
     $router->post('user-profile', 'AuthController@me');
+    $router->post('register', 'AuthController@register');
+    $router->post('test', 'AuthController@getListUsers');
+    $router->post('test1', 'ExampleController@test');
+    $router->post('test2', 'UserController@index');
 
 });
