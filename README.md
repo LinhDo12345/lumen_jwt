@@ -1,24 +1,28 @@
-# Lumen PHP Framework
+# Lumen PHP Framework With JWT, Mysql and Docker
 
-[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
-[![Total Downloads](https://img.shields.io/packagist/dt/laravel/framework)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Stable Version](https://img.shields.io/packagist/v/laravel/framework)](https://packagist.org/packages/laravel/lumen-framework)
-[![License](https://img.shields.io/packagist/l/laravel/framework)](https://packagist.org/packages/laravel/lumen-framework)
+## How to build
+### Prerequisites
+[docker](https://docs.docker.com/engine/install/)
+[docker-compose](https://docs.docker.com/compose/install/)
+## Run docker
+sudo docker-compose --env-file .env up --build
+## Migrate database (first time install)
+sudo docker exec lumenDocker php artisan migrate
+## Check project
+### Check lumen framework
+Send get request to: localhost:8000
+### Check MySql connection
+Send get request to: localhost:8000/checkDB
 
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
+## Usage
+Import testApi/lumen_api.postman_collection.json to postman and enjoy!
+## Documentation
+https://www.youtube.com/watch?v=g_22EUfibJ8&list=WL&index=4&ab_channel=CodeForYou
 
-## Official Documentation
+https://github.com/yossi-abramov/lumen-mysql-docker
 
-Documentation for the framework can be found on the [Lumen website](https://lumen.laravel.com/docs).
+http://www.gacoder.info/bao-mat-lumen-voi-jwt/
 
-## Contributing
+https://www.youtube.com/watch?v=3c-iBn73dDE&ab_channel=TechWorldwithNana
 
-Thank you for considering contributing to Lumen! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Lumen, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Lumen framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+and from offical website of lumen and docker, ...
