@@ -16,11 +16,11 @@
 use Illuminate\Support\Facades\DB;
 
 
-$router->get('/', function () use ($router) {
+$router->get('/checkDB', function () use ($router) {
     dd(DB::getPDO());
 });
 
-$router->get('/version', function () use ($router) {
+$router->get('/', function () use ($router) {
     return $router->app->version();
 });
 

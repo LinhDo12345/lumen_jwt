@@ -8,7 +8,6 @@ services:
       - .:/var/www/html
       - /var/www/html/vendor/
     build: .
-    command: php artisan migrate
     command: php -S lumen:8000 -t public
     restart: always
     depends_on:
