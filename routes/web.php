@@ -13,11 +13,11 @@
 |
 */
 
-
+use Illuminate\Support\Facades\DB;
 
 
 $router->get('/', function () use ($router) {
-    echo "<center> Welcome </center>";
+    dd(DB::getPDO());
 });
 
 $router->get('/version', function () use ($router) {
@@ -34,8 +34,6 @@ $router->group([
     $router->post('refresh', 'AuthController@refresh');
     $router->post('user-profile', 'AuthController@me');
     $router->post('register', 'AuthController@register');
-    $router->post('test', 'AuthController@getListUsers');
-    $router->post('test1', 'ExampleController@test');
-    $router->post('test2', 'UserController@index');
+    $router->post('listAllUser', 'UserController@getAllUser');
 
 });
